@@ -45,3 +45,60 @@ SELECT
     (v.cantidad * v.precio_unitario) AS total_venta
 FROM ventas v
 INNER JOIN clientes c ON v.cliente_id = c.cliente_id;
+```
+### 2. Transformation & Modeling in Excel
+ * Imported the SQL output via Power Query, ensuring proper data type mapping (dates, currency, integers).
+
+* Built 3 distinct Pivot Tables to compute:
+
+  - Revenue by Product Category.
+
+  - Monthly Sales Trend.
+
+  - Top 3 Customers by Total Spend.
+ 
+### 3. Visualization & Interactive Dashboard
+* Designed a clean, single-page executive view with linked KPI cards.
+
+* Implemented interactive Slicers for Country (pais) and Category (categoria), linked across all visual components.
+
+### 📈 Key Insights
+
+* Top Category: Electronics generates the highest revenue volume, exceeding $200,000.
+* Top Spender: Carlos Gómez is the highest-value customer with cumulative purchases of $155,000.
+* Average Ticket: $23,583.33 across 12 total evaluated transactions.
+
+## 📂 Project Structure
+
+```text
+ecommerce-sales-analysis/
+│
+├── data/
+│   ├── raw_data.sql                   # Database setup & sample data inserts
+│   └── reporte_ventas_consolidado.csv # Exported SQL query results
+│
+├── sql/
+│   └── consultas_analisis.sql         # Business intelligence queries
+│
+├── dashboard/
+│   └── Dashboard_Ventas_Ecommerce.xlsx # Final Excel workbook with dashboard
+│
+├── img/
+│   └── dashboard_preview.png          # Dashboard screenshot
+
+```
+## 🔧 How to Replicate
+
+### 1. Clone this repository:
+
+```bash
+git clone [https://github.com/your-username/ecommerce-sales-analysis.git](https://github.com/your-username/ecommerce-sales-analysis.git)
+```
+
+### 2. Execute 
+
+* data/raw_data.sql in your SQL client (e.g., DBeaver, MySQL, PostgreSQL).
+
+### 3. Open 
+* dashboard/Dashboard_Ventas_Ecommerce.xlsx to explore the interactive dashboard.
+
